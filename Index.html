@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EXELLOKNJT | Klepon</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f1df;
+            color: #20352a;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            background: #17452f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #f4f1df;
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #d5d89b;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            padding: 100px 8% 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #dce8c8;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero small {
+            color: #3c7051;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 70px;
+            margin: 20px 0;
+            color: #17452f;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #4c6253;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #17452f;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .button:hover {
+            background: #286645;
+        }
+
+        /* PRODUK */
+        #produk {
+            padding: 100px 8%;
+        }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .judul h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: #17452f;
+        }
+
+        .judul p {
+            margin-top: 10px;
+            color: #68776b;
+        }
+
+        .produk {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(23, 69, 47, 0.12);
+        }
+
+        .produk img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .produk-info {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .produk-info h3 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            color: #17452f;
+            margin-bottom: 15px;
+        }
+
+        .produk-info p {
+            color: #68776b;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .harga {
+            font-size: 28px;
+            font-weight: bold;
+            color: #c27635;
+            margin-bottom: 25px;
+        }
+
+        .pesan {
+            display: inline-block;
+            padding: 13px 27px;
+            background: #17452f;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .pesan:hover {
+            background: #286645;
+        }
+
+        /* TENTANG */
+        .tentang {
+            padding: 90px 10%;
+            background: #17452f;
+            color: white;
+            text-align: center;
+        }
+
+        .tentang h2 {
+            font-family: Georgia, serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .tentang p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #d8e2d8;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px;
+            background: #0f2d1e;
+            color: #b9c9bc;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .produk img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            EXELLOKNJT
+        </div>
+
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#produk">Klepon</a>
+            </li>
+
+            <li>
+                <a href="#tentang">Tentang</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <small>Jajanan Tradisional</small>
+
+            <h1>KLEPON</h1>
+
+            <p>
+                Manis, lembut, dan penuh cita rasa.
+                Nikmati klepon tradisional dengan
+                sentuhan khas EXELLOKNJT.
+            </p>
+
+            <a href="#produk" class="button">
+                Lihat Produk
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUK -->
+    <section id="produk">
+
+        <div class="judul">
+
+            <h2>Menu Kami</h2>
+
+            <p>
+                Satu pilihan, rasa yang berkesan.
+            </p>
+
+        </div>
+
+
+        <div class="produk">
+
+            <img
+                src="Klepon.jpg"
+                alt="Klepon EXELLOKNJT">
+
+            <div class="produk-info">
+
+                <h3>Klepon</h3>
+
+                <p>
+                    Jajanan tradisional dengan tekstur
+                    lembut, rasa manis, dan aroma khas
+                    yang cocok dinikmati kapan saja.
+                </p>
+
+                <div class="harga">
+                    Rp50.000
+                </div>
+
+                <a
+                    class="pesan"
+                    href="https://wa.me/6285604526183?text=Halo%20EXELLOKNJT,%20saya%20ingin%20memesan%20Klepon."
+                    target="_blank">
+
+                    Pesan via WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
+
+        <h2>Tentang EXELLOKNJT</h2>
+
+        <p>
+            EXELLOKNJT menghadirkan jajanan tradisional
+            dengan konsep sederhana, segar, dan modern.
+            Klepon menjadi pilihan utama kami untuk
+            menemani waktu santai.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 EXELLOKNJT. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
